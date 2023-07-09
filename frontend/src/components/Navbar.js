@@ -5,7 +5,7 @@ import Modal from '../Modal';
 import Cart from '../screens/Cart';
 import { useCart } from './ContextReducer';
 
-export default function Navbar() {
+function Navbar() {
   const [cartView, setCartView] = useState(false);
   const [fixedNavbar, setFixedNavbar] = useState(true);
   let data = useCart();
@@ -31,7 +31,7 @@ export default function Navbar() {
 
   return (
     <div>
-      <nav className={`navbar navbar-expand-lg navbar-dark bg-success ${fixedNavbar && isLoginPage == false && isSignupPage == false ? 'fixed-top' : ''}`}>
+      <nav className={`navbar navbar-expand-lg navbar-dark bg-success ${fixedNavbar && isLoginPage === false && isSignupPage === false ? 'fixed-top' : ''}`}>
         <div className="container-fluid">
           <Link className="navbar-brand fs-1 fst-italic" to="/">
             Lunch Box
@@ -99,3 +99,5 @@ export default function Navbar() {
     </div>
   );
 }
+
+export default Navbar;

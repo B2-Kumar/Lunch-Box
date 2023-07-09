@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Navbar from '../components/Navbar';
 import { Link, useNavigate } from 'react-router-dom'
 
-export default function Login() {
+function Login() {
   const [credentials, setcredentials] = useState({ email: "", password: "" });
   let navigate = useNavigate();
   const handleSubmit = async (e) => {
@@ -55,3 +55,5 @@ export default function Login() {
     </div>
   )
 }
+
+export default Login;

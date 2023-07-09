@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Navbar from '../components/Navbar';
 
-export default function Signup() {
+function Signup() {
 
     const [credentials, setcredentials] = useState({ name: "", email: "", password: "", geolocation: "" });
     let navigate = useNavigate();
@@ -63,3 +63,5 @@ export default function Signup() {
         </div>
     )
 }
+
+export default Signup;

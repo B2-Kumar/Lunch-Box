@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 
-export default function MyOrder() {
+function MyOrder() {
 
     const [orderData, setorderData] = useState({})
 
@@ -80,3 +80,5 @@ export default function MyOrder() {
         </div>
     )
 }
+
+export default MyOrder;

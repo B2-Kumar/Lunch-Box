@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useDispatchCart, useCart } from './ContextReducer';
 
-export default function (props) {
+function Card(props) {
   let dispatch = useDispatchCart();
   let data = useCart();
   let options = props.options;
@@ -27,13 +27,11 @@ export default function (props) {
         await dispatch({ type: "ADD", id: props.foodItem._id, name: props.foodItem.name, price: finalPrice, img: props.foodItem.img, qty: qty, size: size })
         return;
       }
-      return;
     }
     else {
       await dispatch({ type: "ADD", id: props.foodItem._id, name: props.foodItem.name, img: props.foodItem.img, price: finalPrice, qty: qty, size: size })
       return;
     }
-    return;
   }
 
   let finalPrice = qty * parseInt(options[size]);
@@ -77,3 +75,5 @@ export default function (props) {
     </div>
   )
 }
+
+export default Card;

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useCart, useDispatchCart } from '../components/ContextReducer';
 import Payment from './Payment';
 
-export default function Cart() {
+function Cart() {
   const [orderPlaced, setOrderPlaced] = useState(false);
   let data = useCart();
   let dispatch = useDispatchCart();
@@ -99,3 +99,5 @@ export default function Cart() {
     </div>
   );
 }
+
+export default Cart;

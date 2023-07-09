@@ -8,7 +8,13 @@ const { v4: uuid } = require("uuid");
 const bodyparser = require('body-parser')
 const stripe = require("stripe")("sk_test_51NJwRvSJu8nZs0KVHqnPLubSVMMpRWCCiT317uF8CBkteGJsZ9dgJ30V5ejxeSuC5ocQ9qic9G9luuw0zoZeR2PG00bHT6eG8J");
 
-app.use(cors());
+app.use(cors(
+  {
+    origin: [""],
+    methods: ["POST", "GET"],
+    credentials: true
+  }
+));
 app.use(express.json());
 app.use(bodyparser.urlencoded({ extended: false }))
 app.use(bodyparser.json())

@@ -11,6 +11,7 @@ function Navbar() {
   let data = useCart();
   let noOfItems = data.length;
   const navigate = useNavigate();
+  
   const handleLogout = () => {
     localStorage.removeItem('authToken');
     navigate('/login');

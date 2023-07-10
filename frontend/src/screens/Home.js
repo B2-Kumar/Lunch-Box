@@ -13,7 +13,6 @@ export default function Home() {
       headers: {
         'Content-Type': 'application/json'
       }
-
     });
     response = await response.json()
     setFoodItems(response[0])

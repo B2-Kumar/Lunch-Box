@@ -50,7 +50,6 @@ function Login() {
           <button type="submit" className="m-3 btn btn-success">Submit</button>
           <Link to="/creatuser" className="m-3 mx-1 btn btn-danger">New User</Link>
         </form>
-
       </div>
     </div>
   )
